@@ -11,12 +11,13 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
     - python
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake >=3.20
     - make
@@ -31,7 +32,6 @@ requirements:
     - yaml-cpp
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - pyyaml
     - yaml-cpp
     - _openmp_mutex  # [linux]
