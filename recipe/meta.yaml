@@ -22,18 +22,16 @@ requirements:
     - cmake >=3.20
     - make
     - ninja
-    - yaml-cpp
   host:
     - python
     - scikit-build-core
     - swig
     - numpy
     - pip
-    - yaml-cpp
   run:
+    - numpy
     - python
     - pyyaml
-    - yaml-cpp
     - _openmp_mutex  # [linux]
     - llvm-openmp    # [osx]
 
@@ -41,9 +39,19 @@ test:
   imports:
     - phreeqcrm
   commands:
-    - pip check
+    - pytest
   requires:
-    - pip
+    - pytest
+  source_files:
+    - database/phreeqc.dat
+    - swig/python/AdvectBMI_py.yaml
+    - swig/python/constants.py
+    - swig/python/test_basic.py
+    - swig/python/test_get_value.py
+    - swig/python/test_init.py
+    - swig/python/test_irf.py
+    - swig/python/test_set_value.py
+    - Tests/advect.pqi
 
 about:
   home: https://github.com/usgs-coupled/phreeqcrm
