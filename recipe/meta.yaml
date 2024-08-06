@@ -39,12 +39,13 @@ test:
   imports:
     - phreeqcrm
   commands:
-    - pytest
+    - pytest -s
   requires:
     - pytest
   source_files:
     - database/phreeqc.dat
     - swig/python/AdvectBMI_py.yaml
+    - swig/python/conftest.py
     - swig/python/constants.py
     - swig/python/test_basic.py
     - swig/python/test_get_value.py
