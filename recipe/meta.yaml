@@ -45,6 +45,10 @@ test:
     - pytest
   files:
     - test_simple.py
+  source_files:
+    - database/phreeqc.dat
+    - swig/python/AdvectBMI_py.yaml
+    - Tests/advect.pqi
 
 about:
   home: https://github.com/usgs-coupled/phreeqcrm
