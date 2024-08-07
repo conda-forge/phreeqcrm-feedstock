@@ -12,6 +12,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  skip: True  # [not linux]
 
 requirements:
   build:
@@ -39,7 +40,7 @@ test:
   imports:
     - phreeqcrm
   commands:
-    - pytest
+    - pytest -s
   requires:
     - pytest
   files:

@@ -5,6 +5,21 @@ import pytest
 
 from phreeqcrm import BMIPhreeqcRM, IRM_OK, State
 
+def test_current_working_directory():
+    cwd = os.getcwd()
+    print(f"Current working directory: {cwd}")
+
+    position = len(cwd) // 2
+    new_string = cwd[:position] + "X" + cwd[position:]
+    print(f"Current working directory: {new_string}")
+
+    # List the contents of the current working directory
+    contents = os.listdir(cwd)
+
+    # Print the contents
+    for item in contents:
+        print(item)
+
 def test_dtor():
     model = BMIPhreeqcRM()
     del model
