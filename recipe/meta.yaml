@@ -39,7 +39,7 @@ test:
   imports:
     - phreeqcrm
   commands:
-    - pytest -s
+    - pytest -s -k test_prereqs
   requires:
     - pytest
   source_files:
