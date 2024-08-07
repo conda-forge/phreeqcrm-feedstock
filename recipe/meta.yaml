@@ -40,8 +40,12 @@ test:
     - phreeqcrm
   commands:
     - pip check
+    - pytest
   requires:
     - pip
+    - pytest
+  files:
+    - test_simple.py
 
 about:
   home: https://github.com/usgs-coupled/phreeqcrm
