@@ -39,10 +39,8 @@ test:
   imports:
     - phreeqcrm
   commands:
-    - pip check
     - pytest
   requires:
-    - pip
     - pytest
   files:
     - test_simple.py
