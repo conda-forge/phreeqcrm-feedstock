@@ -25,7 +25,7 @@ requirements:
   host:
     - python
     - scikit-build-core
-    - swig
+    - swig <=4.2.1
     - numpy
     - pip
   run:
