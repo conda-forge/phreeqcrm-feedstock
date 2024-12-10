@@ -10,7 +10,7 @@ source:
   sha256: bf46b102d4847153b3aaf953dd7945c5c4b00bbe0051fb6785a8ca11cf827e89
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --config-settings=cmake.define.PHREEQCRM_DISABLE_OPENMP=ON
   number: 2
 
 requirements:
