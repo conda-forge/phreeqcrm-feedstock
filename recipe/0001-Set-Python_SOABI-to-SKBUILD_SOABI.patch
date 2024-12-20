@@ -1,0 +1,28 @@
+From c095c6b9fabc243a058591280f0b1cf93f15c92b Mon Sep 17 00:00:00 2001
+From: "Charlton, Scott R." <charlton@usgs.gov>
+Date: Thu, 19 Dec 2024 18:45:27 -0700
+Subject: [PATCH] Set Python_SOABI to SKBUILD_SOABI
+
+---
+ CMakeLists.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index bb44ede..3b3c71d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -109,6 +109,11 @@ if(PHREEQCRM_BUILD_PYTHON)
+   # ie -DPython_ROOT_DIR=C:/Python38-x64
+ endif()
+ 
++if(DEFINED SKBUILD)
++  # see https://scikit-build-core.readthedocs.io/en/latest/cmakelists.html
++  set(Python_SOABI ${SKBUILD_SOABI})
++endif()
++
+ option(PHREEQCRM_NO_UTF8_ENCODING "Build without utf-8 encoding" OFF)
+ 
+ set(PhreeqcRM_SOURCES
+-- 
+2.47.1.windows.1
+
