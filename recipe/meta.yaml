@@ -1,5 +1,5 @@
 {% set name = "phreeqcrm" %}
-{% set version = "0.0.11" %}
+{% set version = "0.0.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phreeqcrm-{{ version }}.tar.gz
-  sha256: bf46b102d4847153b3aaf953dd7945c5c4b00bbe0051fb6785a8ca11cf827e89
+  sha256: 28bd4c73be95b3e6ca8bf6247061a7aeed176bc3135b816a0b829d2fddeb1560
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
