@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -24,7 +24,7 @@ requirements:
     - cmake >=3.20
     - make
     - ninja
-    - swig <=4.2.1
+    - swig
   host:
     - python
     - scikit-build-core
