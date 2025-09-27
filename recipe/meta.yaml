@@ -10,7 +10,6 @@ source:
   sha256: 6374b32ea02bd3fd101f949ac790dafe5140039516afd606f00d6c523d8cddcf
 
 build:
-  skip: match(python, "<3.11")
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
