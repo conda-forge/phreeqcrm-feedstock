@@ -26,13 +26,13 @@ requirements:
     - ninja
     - swig
   host:
-    - python
+    - python >= 3.11
     - scikit-build-core
     - numpy
     - pip
   run:
     - numpy
-    - python
+    - python >= 3.11
     - pyyaml
     - _openmp_mutex  # [linux]
     - llvm-openmp    # [osx]
