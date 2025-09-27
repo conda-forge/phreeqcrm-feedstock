@@ -22,10 +22,10 @@ requirements:
     - cmake >=3.22                           # [build_platform != target_platform]
     - make                                   # [build_platform != target_platform]
     - ninja                                  # [build_platform != target_platform]
-    - swig                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
+    - swig
   host:
     - python
     - scikit-build-core
