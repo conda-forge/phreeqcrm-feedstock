@@ -10,6 +10,7 @@ source:
   sha256: 6374b32ea02bd3fd101f949ac790dafe5140039516afd606f00d6c523d8cddcf
 
 build:
+  skip: match(python, "<3.11")
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -21,18 +22,18 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - cmake >=3.20
+    - cmake >=3.22
     - make
     - ninja
     - swig
   host:
-    - python >=3.11
+    - python
     - scikit-build-core
     - numpy
     - pip
   run:
     - numpy
-    - python >=3.11
+    - python
     - pyyaml
     - _openmp_mutex  # [linux]
     - llvm-openmp    # [osx]
