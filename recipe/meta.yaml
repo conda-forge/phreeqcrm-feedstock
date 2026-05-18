@@ -48,7 +48,6 @@ test:
     - pytest
   source_files:
     - swig/python/advect.pqi
-    - swig/python/AdvectBMI.yaml
     - swig/python/conftest.py
     - swig/python/constants.py
     - swig/python/phreeqc.dat
