@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phreeqcrm-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/phreeqcrm-{{ version }}.tar.gz
   sha256: 4d165c23c8e1c7223d7d74b82fd1a812431da4ab28ffbd6d4481cd868f9c8623
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [py<311]
 
 requirements:
